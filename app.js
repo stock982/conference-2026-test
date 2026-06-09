@@ -62,13 +62,13 @@
           <h2>${escapeHTML(group.title)}</h2>
           ${group.subgroups
             ? `<div class="subgroup-list">${group.subgroups
-                .map(
-                  (subgroup) => `<article>
+              .map(
+                (subgroup) => `<article>
                     <h3>${escapeHTML(subgroup.title)}</h3>
                     <ul>${subgroup.people.map((person) => `<li>${renderLinkedItem(person)}</li>`).join("")}</ul>
                   </article>`
-                )
-                .join("")}</div>`
+              )
+              .join("")}</div>`
             : `<ul>${group.people.map((person) => `<li>${renderLinkedItem(person)}</li>`).join("")}</ul>`}
         </section>`
       )
@@ -118,16 +118,15 @@
             </div>
           </article>
           ${renderGroupGrid(item.groups)}
-          ${
-            item.sections
-              ? `<div class="info-sections">${item.sections
-                  .map((section) => `<section class="${section.layout === "poster" ? "poster-section" : ""}">
+          ${item.sections
+            ? `<div class="info-sections">${item.sections
+              .map((section) => `<section class="${section.layout === "poster" ? "poster-section" : ""}">
                     <h2>${escapeHTML(section.title)}</h2>
                     ${section.text ? `<p>${escapeHTML(section.text)}</p>` : ""}
                     ${renderSectionImageSet(section)}
                   </section>`)
-                  .join("")}</div>`
-              : ""
+              .join("")}</div>`
+            : ""
           }
         </section>`;
       })
@@ -146,10 +145,10 @@
     const eventBlocks = renderEventBlocks(content.eventBlocks, content.title);
     const showcase = !eventBlocks && content.showcase
       ? `${content.showcaseAnchors
-          ? `<nav class="section-anchor-nav" aria-label="${escapeHTML(content.title)} featured sections">${content.showcase
-              .map((item, index) => `<button type="button" data-section-target="showcase-${index + 1}">${escapeHTML(item.title)}</button>`)
-              .join("")}</nav>`
-          : ""}<div class="showcase-grid">${content.showcase
+        ? `<nav class="section-anchor-nav" aria-label="${escapeHTML(content.title)} featured sections">${content.showcase
+          .map((item, index) => `<button type="button" data-section-target="showcase-${index + 1}">${escapeHTML(item.title)}</button>`)
+          .join("")}</nav>`
+        : ""}<div class="showcase-grid">${content.showcase
           .map(
             (item, index) => `<article id="showcase-${index + 1}" class="showcase-card">
               <div class="showcase-visual"><span>${escapeHTML(item.label)}</span></div>
@@ -159,20 +158,20 @@
                 ${item.meta ? `<small>${escapeHTML(item.meta)}</small>` : ""}
                 ${renderActions(item.actions)}
                 ${item.groups
-                  ? `<div class="embedded-groups">${item.groups
-                      .map(
-                        (group) => `<section>
+                ? `<div class="embedded-groups">${item.groups
+                  .map(
+                    (group) => `<section>
                           <h3>${escapeHTML(group.title)}</h3>
                           <ul>${group.people.map((person) => `<li>${renderLinkedItem(person)}</li>`).join("")}</ul>
                         </section>`
-                      )
-                      .join("")}</div>`
-                  : ""}
+                  )
+                  .join("")}</div>`
+                : ""}
                 ${item.sections
-                  ? `<div class="embedded-sections">${item.sections
-                      .map((section) => `<section><h3>${escapeHTML(section.title)}</h3>${section.text ? `<p>${escapeHTML(section.text)}</p>` : ""}</section>`)
-                      .join("")}</div>`
-                  : ""}
+                ? `<div class="embedded-sections">${item.sections
+                  .map((section) => `<section><h3>${escapeHTML(section.title)}</h3>${section.text ? `<p>${escapeHTML(section.text)}</p>` : ""}</section>`)
+                  .join("")}</div>`
+                : ""}
               </div>
             </article>`
           )
@@ -180,42 +179,42 @@
       : "";
     const announcements = content.announcements
       ? `<div class="notice-list">${content.announcements
-          .map((item) => `<article><time>${escapeHTML(item.date)}</time><p>${escapeHTML(item.text)}</p></article>`)
-          .join("")}</div>`
+        .map((item) => `<article><time>${escapeHTML(item.date)}</time><p>${escapeHTML(item.text)}</p></article>`)
+        .join("")}</div>`
       : "";
     const timeline = content.timeline
       ? `<div class="timeline">${content.timeline
-          .map(
-            (item) => `<article><time>${escapeHTML(item.date)}</time><h2>${escapeHTML(item.title)}</h2><p>${escapeHTML(item.text)}</p></article>`
-          )
-          .join("")}</div>`
+        .map(
+          (item) => `<article><time>${escapeHTML(item.date)}</time><h2>${escapeHTML(item.title)}</h2><p>${escapeHTML(item.text)}</p></article>`
+        )
+        .join("")}</div>`
       : "";
     const schedule = content.schedule
       ? `<div class="schedule">${content.schedule
-          .map(
-            (item) => `<article><time>${escapeHTML(item.time)}</time><strong>${escapeHTML(item.title)}</strong><span>${escapeHTML(item.room)}</span></article>`
-          )
-          .join("")}</div>`
+        .map(
+          (item) => `<article><time>${escapeHTML(item.time)}</time><strong>${escapeHTML(item.title)}</strong><span>${escapeHTML(item.room)}</span></article>`
+        )
+        .join("")}</div>`
       : "";
     const sections = content.sections
       ? `${content.sectionAnchors
-          ? `<nav class="section-anchor-nav" aria-label="${escapeHTML(content.title)} sections">${content.sections
-              .map((section, index) => `<button type="button" data-section-target="section-${index + 1}">${escapeHTML(section.title.replace(/^\d+\.\s*/, ""))}</button>`)
-              .join("")}</nav>`
-          : ""}<div class="info-sections">${content.sections
+        ? `<nav class="section-anchor-nav" aria-label="${escapeHTML(content.title)} sections">${content.sections
+          .map((section, index) => `<button type="button" data-section-target="section-${index + 1}">${escapeHTML(section.title.replace(/^\d+\.\s*/, ""))}</button>`)
+          .join("")}</nav>`
+        : ""}<div class="info-sections">${content.sections
           .map(
             (section, index) => {
               const isGuide = section.layout === "guide";
               const routes = section.routes
                 ? `<div class="route-groups">${section.routes
-                    .map(
-                      (route) => `<article class="route-group">
+                  .map(
+                    (route) => `<article class="route-group">
                         <h3>${escapeHTML(route.title)}</h3>
                         <ol class="route-steps">${route.items.map((item) => `<li>${escapeHTML(item)}</li>`).join("")}</ol>
                         ${renderActions(route.actions)}
                       </article>`
-                    )
-                    .join("")}</div>`
+                  )
+                  .join("")}</div>`
                 : "";
               const list = section.items
                 ? isGuide
@@ -225,15 +224,15 @@
               const sectionImages = section.images || (section.image ? [section.image] : []);
               const sectionImage = sectionImages.length
                 ? `<div class="section-images">${sectionImages
-                    .map(
-                      (image) => `<figure class="section-image">
+                  .map(
+                    (image) => `<figure class="section-image">
                         <a href="${escapeHTML(image.src)}" ${image.enlarge ? `target="_blank" rel="noopener noreferrer"` : ""}>
                           <img src="${escapeHTML(image.src)}" alt="${escapeHTML(image.alt || section.title)}" loading="lazy" />
                         </a>
                         ${image.caption ? `<figcaption>${escapeHTML(image.caption)}</figcaption>` : ""}
                       </figure>`
-                    )
-                    .join("")}</div>`
+                  )
+                  .join("")}</div>`
                 : "";
               return `<section id="section-${index + 1}" class="${[isGuide ? "guide-section" : "", section.layout === "poster" ? "poster-section" : ""].filter(Boolean).join(" ")}">
               <h2>${escapeHTML(section.title)}</h2>
@@ -249,43 +248,42 @@
       : "";
     const featureSets = content.featureSets
       ? `<div class="feature-sets">${content.featureSets
-          .map(
-            (set) => `<section class="feature-set">
+        .map(
+          (set) => `<section class="feature-set">
               <div class="section-heading">
                 <h2>${escapeHTML(set.title)}</h2>
                 ${set.summary ? `<p>${escapeHTML(set.summary)}</p>` : ""}
               </div>
               ${renderGroupGrid(set.groups)}
               ${set.sections
-                ? `<div class="info-sections">${set.sections
-                    .map((section) => `<section class="${section.layout === "poster" ? "poster-section" : ""}">
+              ? `<div class="info-sections">${set.sections
+                .map((section) => `<section class="${section.layout === "poster" ? "poster-section" : ""}">
                       <h2>${escapeHTML(section.title)}</h2>
                       ${section.text ? `<p>${escapeHTML(section.text)}</p>` : ""}
-                      ${
-                        section.images && section.images.length
-                          ? `<div class="section-images">${section.images
-                              .map(
-                                (image) => `<figure class="section-image">
+                      ${section.images && section.images.length
+                    ? `<div class="section-images">${section.images
+                      .map(
+                        (image) => `<figure class="section-image">
                                   <a href="${escapeHTML(image.src)}" ${image.enlarge ? `target="_blank" rel="noopener noreferrer"` : ""}>
                                     <img src="${escapeHTML(image.src)}" alt="${escapeHTML(image.alt || section.title)}" loading="lazy" />
                                   </a>
                                   ${image.caption ? `<figcaption>${escapeHTML(image.caption)}</figcaption>` : ""}
                                 </figure>`
-                              )
-                              .join("")}</div>`
-                          : ""
-                      }
+                      )
+                      .join("")}</div>`
+                    : ""
+                  }
                     </section>`)
-                    .join("")}</div>`
-                : ""}
+                .join("")}</div>`
+              : ""}
             </section>`
-          )
-          .join("")}</div>`
+        )
+        .join("")}</div>`
       : "";
     const gallery = content.images
       ? `<div class="gallery-grid">${content.images
-          .map((src, index) => `<img src="${escapeHTML(src)}" alt="${escapeHTML(content.title)} ${index + 1}" loading="lazy" />`)
-          .join("")}</div>`
+        .map((src, index) => `<img src="${escapeHTML(src)}" alt="${escapeHTML(content.title)} ${index + 1}" loading="lazy" />`)
+        .join("")}</div>`
       : "";
     const image = content.image
       ? `<figure class="wide-image"><img src="${escapeHTML(content.image)}" alt="${escapeHTML(content.title)}" /></figure>`
@@ -298,12 +296,12 @@
     const carousel = content.imageCarousel
       ? `<section class="info-carousel" aria-label="${escapeHTML(content.title)} visual carousel">
           ${content.imageCarousel
-            .map(
-              (image, index) => `<figure class="info-slide" style="--slide-index: ${index}">
+        .map(
+          (image, index) => `<figure class="info-slide" style="--slide-index: ${index}">
                 <img src="${escapeHTML(image.src)}" alt="${escapeHTML(image.alt)}" />
               </figure>`
-            )
-            .join("")}
+        )
+        .join("")}
         </section>`
       : "";
     const blocks = content.infoBlocks || [];
@@ -314,8 +312,8 @@
       : "";
     const blockContent = blocks.length
       ? `<div class="info-blocks">${blocks
-          .map(
-            (block) => `<section class="info-block" id="${escapeHTML(block.id)}">
+        .map(
+          (block) => `<section class="info-block" id="${escapeHTML(block.id)}">
               <div class="info-block-heading">
                 <span>${escapeHTML(block.label)}</span>
                 <div>
@@ -324,35 +322,32 @@
                 </div>
               </div>
               ${block.body ? `<div class="prose">${block.body.map((item) => `<p>${escapeHTML(item)}</p>`).join("")}</div>` : ""}
-              ${
-                block.items
-                  ? `<ul class="info-check-list">${block.items.map((item) => `<li>${escapeHTML(item)}</li>`).join("")}</ul>`
-                  : ""
-              }
-              ${
-                block.subsections
-                  ? `<div class="info-subsections">${block.subsections
-                      .map(
-                        (section) => `<article class="info-subsection">
+              ${block.items
+              ? `<ul class="info-check-list">${block.items.map((item) => `<li>${escapeHTML(item)}</li>`).join("")}</ul>`
+              : ""
+            }
+              ${block.subsections
+              ? `<div class="info-subsections">${block.subsections
+                .map(
+                  (section) => `<article class="info-subsection">
                           <h3>${escapeHTML(section.title)}</h3>
                           ${section.body ? `<div class="prose">${section.body.map((item) => `<p>${escapeHTML(item)}</p>`).join("")}</div>` : ""}
                           ${section.items ? `<ul class="info-check-list">${section.items.map((item) => `<li>${escapeHTML(item)}</li>`).join("")}</ul>` : ""}
                           ${renderActions(section.actions)}
                         </article>`
-                      )
-                      .join("")}</div>`
-                  : ""
-              }
-              ${
-                block.questions
-                  ? `<div class="faq-list">${block.questions
-                      .map((item) => `<article><h3>${escapeHTML(item.q)}</h3><p>${escapeHTML(item.a)}</p></article>`)
-                      .join("")}</div>`
-                  : ""
-              }
+                )
+                .join("")}</div>`
+              : ""
+            }
+              ${block.questions
+              ? `<div class="faq-list">${block.questions
+                .map((item) => `<article><h3>${escapeHTML(item.q)}</h3><p>${escapeHTML(item.a)}</p></article>`)
+                .join("")}</div>`
+              : ""
+            }
             </section>`
-          )
-          .join("")}</div>`
+        )
+        .join("")}</div>`
       : renderCommonContent(content);
 
     return `${carousel}${nav}${blockContent}`;
@@ -363,29 +358,29 @@
     const heroSubtitle = content.heroSubtitle ? `<p class="hero-subtitle">${escapeHTML(content.heroSubtitle)}</p>` : "";
     const highlights = content.highlights
       ? `<div class="highlights">${content.highlights
-          .map((item) => `<article><span>${escapeHTML(item.label)}</span><strong>${escapeHTML(item.value)}</strong></article>`)
-          .join("")}</div>`
+        .map((item) => `<article><span>${escapeHTML(item.label)}</span><strong>${escapeHTML(item.value)}</strong></article>`)
+        .join("")}</div>`
       : "";
     const intro = content.body && content.body.length
       ? `<div class="prose home-intro">${content.body.map((item) => `<p>${escapeHTML(item)}</p>`).join("")}</div>`
       : "";
     const columns = content.columns && content.columns.length
       ? `<div class="home-columns">${content.columns
-          .map((item) => {
-            const column = typeof item === "string" ? { text: item } : item;
-            const logos = column.logos && column.logos.length
-              ? `<div class="home-card-marks">${column.logos
-                  .map((logo) => `<img src="${escapeHTML(logo.src)}" alt="${escapeHTML(logo.alt)}" loading="lazy" />`)
-                  .join("")}</div>`
-              : "";
-            const labelContent = column.url ? `<a href="${escapeHTML(column.url)}" target="_blank" rel="noopener noreferrer">${escapeHTML(column.label)}</a>` : escapeHTML(column.label);
-            return `<article>${logos}${column.label ? `<strong class="home-card-title">${labelContent}</strong>` : ""}<p>${column.text}</p></article>`;
-          })
-          .join("")}</div>`
+        .map((item) => {
+          const column = typeof item === "string" ? { text: item } : item;
+          const logos = column.logos && column.logos.length
+            ? `<div class="home-card-marks">${column.logos
+              .map((logo) => `<img src="${escapeHTML(logo.src)}" alt="${escapeHTML(logo.alt)}" loading="lazy" />`)
+              .join("")}</div>`
+            : "";
+          const labelContent = column.url ? `<a href="${escapeHTML(column.url)}" target="_blank" rel="noopener noreferrer">${escapeHTML(column.label)}</a>` : escapeHTML(column.label);
+          return `<article>${logos}${column.label ? `<strong class="home-card-title">${labelContent}</strong>` : ""}<p>${column.text}</p></article>`;
+        })
+        .join("")}</div>`
       : "";
 
-    const columnsTitle = content.columnsTitle 
-      ? `<h2 class="home-columns-title">${escapeHTML(content.columnsTitle)}</h2>` 
+    const columnsTitle = content.columnsTitle
+      ? `<h2 class="home-columns-title">${escapeHTML(content.columnsTitle)}</h2>`
       : "";
 
     return `<section class="hero" style="--hero-image: url('${escapeHTML(data.site.heroImage)}')">
@@ -412,8 +407,8 @@
     setRoute();
     const content = t(page);
     document.documentElement.lang = lang === "zh" ? "zh-Hant" : "en";
-    document.title = content.nav === "首頁" || content.nav === "Home" 
-      ? "2026重構跨越臺海的現代史 | 會議官網" 
+    document.title = content.nav === "首頁" || content.nav === "Home"
+      ? "2026重構跨越臺海的現代史 | 會議官網"
       : `${content.title} | 2026重構跨越臺海的現代史 | 會議官網`;
 
     document.querySelectorAll("[data-bind]").forEach((node) => {
@@ -424,9 +419,9 @@
     nav.innerHTML = `<div class="nav-scroll">${data.nav
       .map((pageId) => `<a class="${pageId === page ? "active" : ""}" href="${linkTo(pageId)}">${escapeHTML(t(pageId).nav)}</a>`)
       .join("")}</div>
-      <div class="lang-switch">${Object.entries(data.languages)
-        .map(([code, label]) => `<a class="${code === lang ? "active" : ""}" href="${linkTo(page, code)}">${escapeHTML(label)}</a>`)
-        .join("")}</div>`;
+      <div class="lang-switch">
+        <a href="${linkTo(page, lang === "zh" ? "en" : "zh")}">${escapeHTML(lang === "zh" ? "ENGLISH" : "中文")}</a>
+      </div>`;
 
     footerLinks.innerHTML = data.externalLinks
       .map((link) => `<a href="${escapeHTML(link.url)}">${escapeHTML(link.label)}</a>`)

@@ -243,15 +243,15 @@ window.CONFERENCE_SITE_DATA = {
         ]
       },
       events: {
-        nav: "近史所聯展與書展",
-        title: "近史所聯展與書展",
+        nav: "三館聯展與書展",
+        title: "三館聯展與書展",
         summary: "近史所檔案館、圖書館、胡適紀念館三館聯展與國際學術出版社書展",
         eventBlocks: [
           {
             label: "01",
             title: "跨越臺海的史料現場：檔案館・圖書館・胡適紀念館三館聯展",
             text: "敬請期待",
-            meta: "時間：2026年8月4日（星期二）至8月6日（星期四）｜地點：近史所檔案館1樓左側廊道",
+            meta: "時間：2026年8月3日（星期一）至12月30日（星期三）。週一至週五 09：00~17:00，國定例假日休館。｜地點：近史所檔案館1樓左側廊道",
             groups: [
               {
                 title: "參展館室",
@@ -289,12 +289,12 @@ window.CONFERENCE_SITE_DATA = {
           {
             type: "simple",
             label: "02",
-            title: "聯展導覽活動報名",
+            title: "研討會專屬導覽活動報名",
             text: "",
             meta: "",
             actions: [
-              { label: "珍貴館藏聯展導覽", url: "#", style: "primary" },
-              { label: "胡適紀念館導覽", url: "#", style: "secondary" }
+              { label: "三館聯展限定導覽", url: "#", style: "primary" },
+              { label: "胡適紀念館專場導覽", url: "#", style: "secondary" }
             ]
           },
           {
@@ -364,7 +364,7 @@ window.CONFERENCE_SITE_DATA = {
             ]
           }
         ]
-      },      venue: {
+      }, venue: {
         nav: "會議地點",
         title: "會議地點",
         summary: "四個會場分設於中央研究院近代史研究所檔案館與人文社會科學研究中心。",
@@ -801,8 +801,8 @@ window.CONFERENCE_SITE_DATA = {
         ]
       },
       events: {
-        nav: "IMH Exhibition and Book Fair",
-        title: "IMH Exhibition and Book Fair",
+        nav: "Exhibition and Book Fair",
+        title: "Exhibition and Book Fair",
         summary: "A three-site exhibition at the IMH Archives, Kuo Ting-yee Library, and Hu Shih Memorial Hall, together with the International Academic Publishers Exhibition.",
         eventBlocks: [
           {
@@ -922,7 +922,7 @@ window.CONFERENCE_SITE_DATA = {
             ]
           }
         ]
-      },      venue: {
+      }, venue: {
         nav: "Conference Venue",
         title: "Conference Venue",
         summary: "The four venues are located in the Archives Building, Institute of Modern History, and the Research Center for Humanities and Social Sciences, Academia Sinica.",
