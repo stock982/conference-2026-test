@@ -1,6 +1,6 @@
 window.CONFERENCE_SITE_DATA = {
   site: {
-    version: "2026-05-07-events-flow-layout",
+    version: "2026-06-09-tour-highlights-final",
     shortTitle: "2026",
     title: "重構跨越臺海的現代史",
     host: "重構跨越臺海的現代史",
@@ -249,7 +249,7 @@ window.CONFERENCE_SITE_DATA = {
         eventBlocks: [
           {
             label: "01",
-            title: "跨越臺海的史料現場：檔案館・圖書館・胡適紀念館三館聯展",
+            title: "史料現場 X 近史所三館聯合特展：近代東亞的權力重構與人群移動",
             text: "敬請期待",
             meta: "時間：2026年8月3日（星期一）至12月30日（星期三）。週一至週五 09：00~17:00，國定例假日休館。｜地點：近史所檔案館1樓左側廊道",
             groups: [
@@ -263,7 +263,7 @@ window.CONFERENCE_SITE_DATA = {
               },
               {
                 title: "聯展亮點",
-                people: ["敬請期待"]
+                people: ["當冰冷的檔案遇上鮮活的人生，歷史不再只是文字。本次展覽由近史所檔案館、胡適紀念館及郭廷以圖書館共同攜手，將封存於庫房中的特藏資料、醫療藥方、將領日記與外交經濟文書交織並置，邀請您走入近代史的最前線。"]
               },
               {
                 title: "聯展聯絡窗口",
@@ -293,8 +293,8 @@ window.CONFERENCE_SITE_DATA = {
             text: "",
             meta: "",
             actions: [
-              { label: "三館聯展限定導覽", url: "#", style: "primary" },
-              { label: "胡適紀念館專場導覽", url: "#", style: "secondary" }
+              { label: "三館聯展限定導覽", page: "exhibition_tour", style: "primary" },
+              { label: "胡適紀念館專場導覽", page: "hushih_tour", style: "secondary" }
             ]
           },
           {
@@ -584,6 +584,115 @@ window.CONFERENCE_SITE_DATA = {
           "住宿及入臺證申請：許惠文小姐（wen357@as.edu.tw）",
           "議程安排及個人資料異動：黃怡真小姐（huangyichen@as.edu.tw）"
         ]
+      },
+      exhibition_tour: {
+        nav: "三館聯展限定導覽",
+        title: "【研討會限定】史料現場：\n三館聯展與近代史數位典藏巡禮",
+        summary: "一場穿越時空的學術對話，僅於 8 月 3 日午後限定開啟。",
+        body: [
+          "本次學術研討會期間，我們特別策劃「史料現場」限定導覽行程。這不僅是一場參觀活動，更是一場深入近代史研究核心的實地探索。我們將帶領與會學者與貴賓，從宏觀的聯展視野出發，深入檔案館核心庫房，並近距離認識支撐當代研究的重要檔案、圖書與數位資源。",
+          "誠摯邀請各位與會先進，與我們一同走入史料的呼吸之中。"
+        ],
+        sections: [
+          {
+            title: "活動資訊",
+            items: [
+              "活動日期：2026 年 8 月 3 日（星期一）",
+              "活動時間：13:30–17:00（導覽行程約 1 小時 40 分鐘，將依報名人數分場次進行）",
+              "導覽地點：近代史研究所檔案館",
+              "集合地點：近代史研究所檔案館第二會議室",
+              "活動對象：本次研討會與會學者及嘉賓"
+            ]
+          },
+          {
+            title: "行程亮點",
+            items: [
+              "【三館聯展特導】聚焦權力重構與人群移動：特別針對本次三館聯合策展內容進行精華導覽，帶領與會者解讀史料背後隱含的權力流轉與歷史脈絡。",
+              "【直擊史料核心】走進檔案館典藏空間：特別開放檔案館三樓庫房與閱覽空間，讓與會嘉賓近距離感受檔案保存工作的專業、溫度與嚴謹。",
+              "【研究利器解析】檔案與圖書數位資源簡介：由檔案館主任蘇聖雄與學科館員張瑜庭解說近代史研究不可或缺 of 檔案應用、圖書文獻與數位資料庫資源，協助研究者掌握多元研究工具。",
+              "【專業交流對話】深度座談 Q&A：行程最後安排綜合交流時段，由研究人員及與會者進行面對面交流與結語分享，交流史料典藏與學術應用的實務經驗。"
+            ],
+            images: [
+              {
+                src: "assets/images/tour-entrance.jpg",
+                alt: "檔案館入口與集合地點",
+                caption: "座談與交流場地：近代史研究所檔案館",
+                enlarge: true
+              },
+              {
+                src: "assets/images/tour-exhibition-room.jpg",
+                alt: "檔案館庫房與閱覽空間",
+                caption: "檔案館核心典藏庫房與閱覽空間展示",
+                enlarge: true
+              }
+            ]
+          },
+          {
+            title: "主辦與聯絡資訊",
+            items: [
+              "主辦單位：近代史研究所檔案館、郭廷以圖書館、胡適紀念館",
+              "聯絡人：近史所檔案館 林佩璇（✉︎ 電子信箱：quen@as.edu.tw）"
+            ]
+          }
+        ],
+        actions: [
+          { label: "線上預約導覽", url: "https://forms.gle/XFPxVn7Stahsw1SSA", style: "primary" },
+          { label: "返回三館聯展與書展", page: "events", style: "secondary" }
+        ]
+      },
+      hushih_tour: {
+        nav: "胡適紀念館專場導覽",
+        title: "胡適紀念館專場導覽",
+        summary: "走近新文化運動巨擘的生平與思想，特別為大會學者與貴賓提供專場導覽。",
+        body: [
+          "胡適（1891-1962）是新文化運動的重要推手，他所領導的文學革命改變了現在漢語使用者的溝通方式。對日抗戰期間，胡適出任駐美大使，促成中美合作抗日。他雖然與執政黨關係密切，卻始終信仰自由與理性，堅持獨立與人權。1958年，胡適返臺就任中央研究院院長，致力於學術的發展與獨立，在風雨飄搖的局勢中為國家拔擢人才，成為臺灣人文與科技發展的重要基礎。",
+          "胡適過世後，院方將故居改建為紀念館，並增建陳列室，用以介紹胡適的生平與貢獻，同時保存、陳列胡適的藏書、生活場域及其他遺物。",
+          "胡適紀念館在會議舉行當週期間，特別為與會者提供導覽服務，請有意願參與的朋友報名。"
+        ],
+        sections: [
+          {
+            title: "導覽資訊",
+            items: [
+              "導覽範圍：胡適紀念館（陳列室與故居）",
+              "導覽時間：8月4日（星期二）至8月8日（星期六），共計10場",
+              "導覽時段：每日 10:00–11:00 以及 14:30–15:30"
+            ]
+          },
+          {
+            title: "紀念館故居與陳列展示",
+            images: [
+              {
+                src: "assets/images/tour-hushih-1.jpg",
+                alt: "胡適紀念館故居",
+                caption: "胡適紀念館保存的胡適先生生活舊址",
+                enlarge: true
+              },
+              {
+                src: "assets/images/tour-hushih-2.jpg",
+                alt: "胡適紀念館內部陳列",
+                caption: "陳列室展示胡適生平與重要藏書",
+                enlarge: true
+              },
+              {
+                src: "assets/images/tour-hushih-colored.jpg",
+                alt: "歷史照片上色",
+                caption: "胡適先生歷史活動照片",
+                enlarge: true
+              }
+            ]
+          },
+          {
+            title: "主辦與聯絡資訊",
+            items: [
+              "主辦單位：胡適紀念館",
+              "聯絡人：胡適紀念館 岑丞丕（✉︎ 電子信箱：chengpi@as.edu.tw）"
+            ]
+          }
+        ],
+        actions: [
+          { label: "線上報名導覽", url: "https://forms.gle/Evfgeft8C966C9Np8", style: "primary" },
+          { label: "返回三館聯展與書展", page: "events", style: "secondary" }
+        ]
       }
     },
     en: {
@@ -851,8 +960,8 @@ window.CONFERENCE_SITE_DATA = {
             text: "",
             meta: "",
             actions: [
-              { label: "Special Collections Tour", url: "#", style: "primary" },
-              { label: "Hu Shih Memorial Hall Tour", url: "#", style: "secondary" }
+              { label: "Special Collections Tour", page: "exhibition_tour", style: "primary" },
+              { label: "Hu Shih Memorial Hall Tour", page: "hushih_tour", style: "secondary" }
             ]
           },
           {
@@ -1142,6 +1251,127 @@ window.CONFERENCE_SITE_DATA = {
           "Ms. Lin | Conference coordination | schuan@as.edu.tw",
           "Ms. Hsu | Accommodation and entry permit applications | wen357@as.edu.tw",
           "Ms. Huang | Program arrangements and personal information updates | huangyichen@as.edu.tw"
+        ]
+      },
+      exhibition_tour: {
+        nav: "Special Collections Tour",
+        title: "[Conference Exclusive] Historical Sites:\nA Guided Tour of the Three-Institute Joint Exhibition and Digital Archives of Modern History",
+        summary: "A dialogue across time and space, exclusively open on the afternoon of August 3.",
+        body: [
+          "During this academic conference, we have specially planned a \"Historical Sites\" exclusive guided tour. This is not just a sightseeing tour, but an in-depth exploration into the core of modern history research. We will lead conference scholars and guests from a macro perspective of the joint exhibition to the core archives vault, and provide a close-up look at key archives, books, and digital resources supporting contemporary research.",
+          "We sincerely invite all participants to step into the breathing space of historical materials with us."
+        ],
+        sections: [
+          {
+            title: "Event Information",
+            items: [
+              "Date: August 3, 2026 (Monday)",
+              "Time: 13:30–17:00 (The tour takes about 1 hour and 40 minutes, session schedules assigned based on registration)",
+              "Location: Archives of the Institute of Modern History",
+              "Meeting Point: Second Conference Room, Archives of the Institute of Modern History",
+              "Target Audience: Conference participants and distinguished guests"
+            ]
+          },
+          {
+            title: "Tour Highlights",
+            items: [
+              "【Joint Exhibition Tour】Focusing on power reconstruction and population movement, offering a guided highlight of the three-institute joint exhibition.",
+              "【Direct Access to Archive Core】Specially opening the 3rd-floor vault and reading room of the Archives, giving guests a firsthand experience of professional archives preservation.",
+              "【Research Tools Demystified】Introduction to essential archives, literature, and digital databases by Archive Director Su Sheng-hsiung and subject librarian Chang Yu-ting.",
+              "【Professional Exchange】A concluding Q&A session for researchers and guests to interact and share experiences on archival preservation and academic application."
+            ],
+            images: [
+              {
+                src: "assets/images/tour-diary.jpg",
+                alt: "Joint Exhibition Highlight Exhibit (Chiang Kai-shek's Diary)",
+                caption: "Highlight of the joint exhibition: Chiang Kai-shek's Diary",
+                enlarge: true
+              },
+              {
+                src: "assets/images/tour-exhibition-room.jpg",
+                alt: "Archive vault and reading space",
+                caption: "Exhibition of the core archival storage space",
+                enlarge: true
+              },
+              {
+                src: "assets/images/tour-digital-database.jpg",
+                alt: "Modern history digital resources",
+                caption: "Digital databases for modern history research (Xinhua News Agency 'Internal Reference' Database)",
+                enlarge: true
+              },
+              {
+                src: "assets/images/tour-entrance.jpg",
+                alt: "Archives building entrance and meeting venue",
+                caption: "Venue for exchanges and discussion: Archives of the Institute of Modern History",
+                enlarge: true
+              }
+            ]
+          },
+          {
+            title: "Hosts & Contact",
+            items: [
+              "Organizers: Archives of the Institute of Modern History, Institute of Modern History Library (Kuo Ting-yee Library), Hu Shih Memorial Hall",
+              "Contact: Ms. Lin Pei-hsuan, Archives of IMH (✉︎ Email: quen@as.edu.tw)"
+            ]
+          }
+        ],
+        actions: [
+          { label: "Register Online", url: "https://forms.gle/XFPxVn7Stahsw1SSA", style: "primary" },
+          { label: "Back to Exhibition & Book Fair", page: "events", style: "secondary" }
+        ]
+      },
+      hushih_tour: {
+        nav: "Hu Shih Memorial Hall Tour",
+        title: "Hu Shih Memorial Hall Special Guided Tour",
+        summary: "Explore the life and thoughts of a giant in the New Culture Movement, with a dedicated guided tour for conference scholars and guests.",
+        body: [
+          "Hu Shih (1891-1962) was a crucial promoter of the New Culture Movement, and the literary revolution he led transformed how modern Chinese speakers communicate. During the Sino-Japanese War, Hu served as the ambassador to the United States, fostering Sino-US cooperation. Despite his close ties to the ruling party, he remained committed to freedom, reason, independence, and human rights. In 1958, Hu returned to Taiwan to serve as the President of Academia Sinica, dedicating himself to academic development and independence, nurturing talents in a turbulent era, and laying a solid foundation for Taiwan's humanities and scientific progress.",
+          "Following his passing, the residence was converted into a memorial hall with an added exhibition gallery to introduce his life and contributions, preserving his personal library, living quarters, and other historical relics.",
+          "During the conference week, the Hu Shih Memorial Hall is offering special guided tours for participants. Interested friends are welcome to sign up."
+        ],
+        sections: [
+          {
+            title: "Tour Information",
+            items: [
+              "Tour Range: Hu Shih Memorial Hall (Exhibition Gallery and Residence)",
+              "Tour Dates: August 4 (Tue) to August 8 (Sat), 10 sessions in total",
+              "Time Slots: 10:00–11:00 and 14:30–15:30 daily"
+            ]
+          },
+          {
+            title: "Gallery & Residence Preview",
+            images: [
+              {
+                src: "assets/images/tour-hushih-1.jpg",
+                alt: "Hu Shih Residence",
+                caption: "The preserved residence of Dr. Hu Shih",
+                enlarge: true
+              },
+              {
+                src: "assets/images/tour-hushih-2.jpg",
+                alt: "Exhibition Gallery",
+                caption: "Exhibiting Hu Shih's life and key publications",
+                enlarge: true
+              },
+              {
+                src: "assets/images/tour-hushih-colored.jpg",
+                alt: "Colorized Historical Photograph",
+                caption: "Colorized photograph of Dr. Hu Shih at an event",
+                enlarge: true
+              }
+            ]
+          },
+          {
+            title: "Hosts & Contact",
+            items: [
+              "Organizer: Hu Shih Memorial Hall",
+              "Contact: Mr. Tseng Cheng-pi, Hu Shih Memorial Hall (✉︎ Email: chengpi@as.edu.tw)"
+            ]
+          }
+        ],
+        actions: [
+          { label: "Register Online", url: "https://forms.gle/Evfgeft8C966C9Np8", style: "primary" },
+          { label: "Back to Exhibition & Book Fair", page: "events", style: "secondary" }
         ]
       }
     }

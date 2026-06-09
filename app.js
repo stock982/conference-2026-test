@@ -409,7 +409,7 @@
     document.documentElement.lang = lang === "zh" ? "zh-Hant" : "en";
     document.title = content.nav === "首頁" || content.nav === "Home"
       ? "2026重構跨越臺海的現代史 | 會議官網"
-      : `${content.title} | 2026重構跨越臺海的現代史 | 會議官網`;
+      : `${content.title.replace(/\n/g, " ")} | 2026重構跨越臺海的現代史 | 會議官網`;
 
     document.querySelectorAll("[data-bind]").forEach((node) => {
       const path = node.dataset.bind.split(".");
@@ -433,7 +433,7 @@
       main.innerHTML = `<section class="page-hero">
         <div class="content-inner">
           <p class="eyebrow">${escapeHTML(data.site.shortTitle)}</p>
-          <h1>${escapeHTML(content.title)}</h1>
+          <h1>${escapeHTML(content.title).replaceAll("\n", "<br>")}</h1>
           <p>${escapeHTML(content.summary || "")}</p>
         </div>
       </section>
